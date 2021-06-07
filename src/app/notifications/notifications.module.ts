@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ForecastComponent } from './forecast/forecast.component';
+import { NotificationListComponent } from './notification-list/notification-list.component';
 
 
 
 @NgModule({
   declarations: [
-    ForecastComponent
+    NotificationListComponent
   ],
   imports: [
     CommonModule
-  ],
-  exports: [
-    ForecastComponent
   ]
 })
-export class WeatherModule { }
+export class NotificationsModule { }
