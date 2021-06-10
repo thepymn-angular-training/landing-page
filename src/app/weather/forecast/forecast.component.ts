@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { NotificationsService } from 'src/app/notifications/notifications.service';
 import { ForecastService } from '../forecast.service';
 
 @Component({

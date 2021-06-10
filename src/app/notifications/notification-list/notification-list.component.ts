@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { NotificationsService, Command } from '../notifications.service';
 
 @Component({
   selector: 'app-notification-list',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notification-list.component.css']
 })
 export class NotificationListComponent implements OnInit {
+  messages: Observable<Command[]>
 
-  constructor() { }
+  constructor(private notificationService: NotificationsService) {
+    this.messages = this.notificationService.messagesOutput;
+  }
 
   ngOnInit(): void {
+
+  }
+
+
+  clearMessage(id: number) {
+    this.notificationService.clearMessages(id);
   }
 
 }

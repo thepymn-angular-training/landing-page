@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NotificationsModule } from './notifications/notifications.module';
 import { WeatherModule } from './weather/weather.module';
 
 @NgModule({
@@ -14,7 +15,8 @@ import { WeatherModule } from './weather/weather.module';
     BrowserModule,
     AppRoutingModule,
     WeatherModule,
-    HttpClientModule
+    HttpClientModule,
+    NotificationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
